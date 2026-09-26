@@ -1,7 +1,7 @@
 # 🚢 碧蓝航线秘书舰 · 桌面宠物（企业版增强）
 
 > 一个接入 AstrBot 的桌宠客户端 + 配套服务端插件（含 awareness 感知增强）
-> 8 位舰娘轮换 · AI 对话 · 桌面感知 · TTS 语音
+> 10 位舰娘轮换 · AI 对话 · 桌面感知 · 工具调用
 
 ---
 
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 python remove_bg.py 立绘原图.png --output skins/企业.png --model isnet-general-use
 ```
 
-支持的 8 个立绘文件名：`enterprise.png`、`shoukaku.png`、`newjersey.png`、`hood.png`、`zuikaku.png`、`essex.png`、`taihou.png`、`yorktown2.png`
+支持的 10 个立绘文件名：`enterprise.png`、`shoukaku.png`、`belfast.png`、`newjersey.png`、`hood.png`、`zuikaku.png`、`essex.png`、`taihou.png`、`yorktown2.png`、`anshan.png`
 
 ### 3️⃣ 启动
 
@@ -92,11 +92,11 @@ python main.py
 
 | 功能 | 说明 |
 |:---|:---|
-| **舰娘轮换** | 按日期自动切换 8 位秘书舰立绘 + 语音 |
+| **舰娘轮换** | 按日期自动切换 10 位秘书舰立绘（企业、翔鹤、贝尔法斯特、新泽西、胡德、瑞鹤、埃塞克斯、大凤、约克城、鞍山） |
 | **AI 对话** | 点击弹窗对话，经 AstrBot 接入 LLM |
 | **桌面感知** | 🆕 主动观察屏幕，智能搭话 |
 | **工具调用** | 查看/分析屏幕、系统信息、执行命令、打开文件 |
-| **TTS 语音** | 支持 GPT-SoVITS 语音合成播放 |
+| **TTS 语音** | 🚧 规划中（暂未实现，框架已预留 GPT-SoVITS 接口）|
 | **番茄钟** | 内置工作/休息计时 |
 | **透明显示** | 无边框、拖拽、呼吸浮动动画 |
 
