@@ -12,7 +12,7 @@
 |:---:|:---|:---:|
 | 1 | 仓库结构（client/ + plugin/ + docs/） | ✅ |
 | 2 | 客户端脱敏（API Key + 硬编码路径） | ✅ |
-| 3 | 插件脱敏（无 ealin 残留 / 无 session） | ✅ |
+| 3 | 插件脱敏（无 <user> 残留 / 无 session） | ✅ |
 | 4 | 清除 __pycache__ / .pyc | ✅ |
 | 5 | 根 README.md（一站式说明） | ✅ |
 | 6 | 根 LICENSE（MIT 双版权） | ✅ |
@@ -126,8 +126,8 @@ python -m PyInstaller --noconfirm --clean enterprise_desktop_pet.spec
 
 | 项目 | 原路径 |
 |:---|:---|
-| 客户端 | `D:\AI的奇思妙想\desktop_pet\` |
-| 插件 | `C:\Users\ealin\.astrbot\data\plugins\astrbot_plugin_desktop_assistant\` |
+| 客户端 | `<原项目目录>\desktop_pet\` |
+| 插件 | `<用户目录>\.astrbot\data\plugins\astrbot_plugin_desktop_assistant\` |
 | 发布目录 | `D:\entreprise_pet_release\` |
 
 > 💾 原文件已备份（`*_pre_release_bak_20260926_175400`）
