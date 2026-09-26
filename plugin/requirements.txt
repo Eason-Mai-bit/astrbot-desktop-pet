@@ -1,0 +1,11 @@
+# AstrBot desktop assistant plugin dependencies
+# Server side (AstrBot plugin)
+
+# Image processing
+Pillow>=9.0.0
+
+# System monitoring
+psutil>=5.9.0
+
+# Standalone WebSocket server mode
+websockets>=12.0

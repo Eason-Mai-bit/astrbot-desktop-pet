@@ -1,0 +1,6 @@
+﻿PyQt5>=5.15,<6.0
+PyQtWebEngine>=5.15
+rembg>=2.0.57
+onnxruntime>=1.16
+numpy>=1.24
+requests>=2.31

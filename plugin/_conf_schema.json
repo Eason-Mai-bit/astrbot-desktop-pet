@@ -1,0 +1,145 @@
+{
+    "vision_mode": {
+        "description": "识图模式",
+        "hint": "选择使用哪个模型进行截图分析。auto=自动检测（推荐），chat=使用对话模型，dedicated=使用独立模型",
+        "type": "string",
+        "options": [
+            "auto",
+            "chat",
+            "dedicated"
+        ],
+        "default": "auto"
+    },
+    "dedicated_provider_id": {
+        "description": "独立识图模型 Provider ID",
+        "hint": "当识图模式为 dedicated 时生效，填写支持多模态的 LLM Provider ID（如 openai_gpt4o）",
+        "type": "string",
+        "default": ""
+    },
+    "ws_host": {
+        "description": "WebSocket 监听地址",
+        "hint": "默认 0.0.0.0 监听所有网卡",
+        "type": "string",
+        "default": "0.0.0.0"
+    },
+    "ws_port": {
+        "description": "WebSocket 端口",
+        "hint": "提供客户端连接的 WebSocket 端口",
+        "type": "int",
+        "default": 6190
+    },
+    "max_screenshots": {
+        "description": "截图最大保留数量",
+        "hint": "超过上限会自动清理最早的截图，0 表示不限制",
+        "type": "int",
+        "default": 20
+    },
+    "screenshot_max_age_hours": {
+        "description": "截图最大保留时长(小时)",
+        "hint": "超过时长自动清理，0 表示不限制",
+        "type": "int",
+        "default": 24
+    },
+    "perception_enabled": {
+        "description": "启用感知引擎",
+        "hint": "开启后桌宠将持续感知屏幕状态并智能触发交互",
+        "type": "bool",
+        "default": true
+    },
+    "perception_interval": {
+        "description": "感知分析间隔(秒)",
+        "hint": "多久分析一次屏幕截图，建议 20-60 秒",
+        "type": "int",
+        "default": 30
+    },
+    "perception_history_size": {
+        "description": "场景记忆保留数量",
+        "hint": "滑动窗口保留的历史快照数量",
+        "type": "int",
+        "default": 20
+    },
+    "perception_error_detection": {
+        "description": "启用错误检测",
+        "hint": "检测屏幕上的错误弹窗并主动提供帮助",
+        "type": "bool",
+        "default": true
+    },
+    "perception_focus_evaluation": {
+        "description": "启用专注度评估",
+        "hint": "评估用户工作专注度，长时间工作后提醒休息",
+        "type": "bool",
+        "default": true
+    },
+    "perception_companion_mode": {
+        "description": "启用陪伴模式",
+        "hint": "感知用户状态并提供陪伴式交互",
+        "type": "bool",
+        "default": true
+    },
+    "perception_stuck_threshold": {
+        "description": "卡住检测阈值(秒)",
+        "hint": "同一任务持续多久视为可能卡住",
+        "type": "int",
+        "default": 300
+    },
+    "perception_idle_threshold": {
+        "description": "空闲检测阈值(秒)",
+        "hint": "空闲多久后触发陪伴交互",
+        "type": "int",
+        "default": 300
+    },
+    "perception_overtime_threshold": {
+        "description": "工作超时阈值(秒)",
+        "hint": "连续工作多久后提醒休息",
+        "type": "int",
+        "default": 3600
+    },
+    "perception_max_interactions_per_hour": {
+        "description": "每小时最大主动交互次数",
+        "hint": "感知引擎每小时最多主动发起的对话次数，调大可以获得更频繁的主动交互",
+        "type": "int",
+        "default": 5
+    },
+    "enable_desktop_monitor": {
+        "description": "启用桌面监控",
+        "hint": "接收桌面客户端上报的状态数据，关闭后主动回话与截图分析将不可用",
+        "type": "bool",
+        "default": true
+    },
+    "enable_proactive_dialog": {
+        "description": "启用主动回话",
+        "hint": "开启后桌宠会随机主动找你说话（内容结合当前屏幕感知）",
+        "type": "bool",
+        "default": true
+    },
+    "proactive_probability": {
+        "description": "主动回话概率(0~1)",
+        "hint": "每次随机到点后真正发起主动回话的概率，0.3 表示 30%",
+        "type": "float",
+        "default": 0.3
+    },
+    "proactive_min_interval": {
+        "description": "主动回话最小间隔(秒)",
+        "hint": "随机等待的最短时间，默认 300 秒（5 分钟）",
+        "type": "int",
+        "default": 300
+    },
+    "proactive_max_interval": {
+        "description": "主动回话最大间隔(秒)",
+        "hint": "随机等待的最长时间，默认 900 秒（15 分钟）",
+        "type": "int",
+        "default": 900
+    },
+    "perception_analysis_prompt": {
+        "description": "感知分析提示词",
+        "hint": "分析屏幕截图时使用的提示词，留空使用默认。可自定义让模型重点关注某些内容",
+        "type": "string",
+        "default": ""
+    },
+    "proactive_instruction_prompt": {
+        "description": "主动回话提示词",
+        "hint": "指示桌宠如何主动说话。可用 {analysis} 占位符表示屏幕分析结果。留空使用默认",
+        "type": "string",
+        "default": ""
+    }
+}

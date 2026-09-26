@@ -1,0 +1,13 @@
+name: "astrbot_plugin_desktop_assistant"
+display_name: "桌面助手（企业版增强）"
+description: "AstrBot桌宠悬浮球服务端（企业版增强）——基于原版修改，新增 awareness 感知协议扩展、screenshot 处理优化，配合『碧蓝航线秘书舰桌宠』客户端使用。支持桌面感知主动对话、TTS语音、LLM工具调用（查看/分析屏幕、系统信息、执行命令、打开文件）"
+author: "木有知、lxfight（原版）; Eason-Mai-bit（企业版增强）"
+version: "1.2.0-enterprise"
+repo: "https://github.com/Eason-Mai-bit/astrbot-desktop-pet"
+original_repo: "https://github.com/muyouzhi6/astrbot_plugin_desktop_assistant"
+license: "MIT"
+tags:
+  - desktop-pet
+  - awareness
+  - vision
+  - enterprise-enhanced

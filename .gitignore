@@ -1,0 +1,43 @@
+# ── 敏感信息（严禁提交）──
+pet_config.json
+*_config.local.json
+.env
+*.key
+*api_key*
+*_token*
+
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+
+# ── 打包产物 ──
+build/
+dist/
+*.spec
+*.exe
+
+# ── 资源（体积大/版权原因，不提交）──
+client/skins/
+client/voices/
+*.onnx
+*.wav
+*.mp3
+
+# ── 备份/临时 ──
+*.bak
+*.old
+*.old_*
+*.pre_release_bak_*
+_testdata/
+temp/
+.log
+
+# ── 系统 ──
+.DS_Store
+Thumbs.db
+desktop.ini
